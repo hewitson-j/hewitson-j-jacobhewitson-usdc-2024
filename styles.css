@@ -1,0 +1,36 @@
+* {
+  font-family: "Roboto Flex", Arial, Helvetica, sans-serif;
+}
+
+header {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.main {
+  width: 50%;
+  margin: 5rem auto;
+  text-align: center;
+  font-size: 14pt;
+}
+
+.searchbar {
+  margin-top: 2rem;
+  font-size: 14pt;
+}
+
+.searchbar input[type="button"] {
+  padding: 0.5rem;
+  font-size: 15pt;
+}
+
+.searchbar input[type="button"]:hover {
+  cursor: pointer;
+}
+
+.searchbar input[type="text"] {
+  font-size: 15pt;
+  padding: 0.5rem;
+  width: 50%;
+}

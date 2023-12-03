@@ -1,0 +1,16 @@
+{
+  "name": "usdc-project-assessment",
+  "version": "1.0.0",
+  "description": "A project assessment for the US Digital Corps.",
+  "main": "index.html",
+  "scripts": {
+    "test": "run test",
+    "start": "index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "hhtp://github.com/hewitson-j/jacobhewitson-usdc-2024"
+  },
+  "author": "Jacob Hewitson",
+  "license": "MIT"
+}

@@ -62,7 +62,7 @@ searchButton.addEventListener("click", () => {
   }
 });
 
-// Array for the books
+// Array for test data
 const booksArr = [
   {
     Title: "Shakespeare's Sonnet #115",

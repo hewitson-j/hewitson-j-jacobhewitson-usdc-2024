@@ -109,16 +109,105 @@ const booksArr = [
 ];
 
 // Unit Tests
+const testResult1 = findSearchTermInBooks("the", booksArr); // Case-sensitive lower case
+const testResult2 = findSearchTermInBooks("The", booksArr); // Case-sensitive upper case
+const testResult3 = findSearchTermInBooks("myself", booksArr); // Positive case
+const testResult4 = findSearchTermInBooks("Zootopia", booksArr); // Negative Case
+const testResult5 = findSearchTermInBooks("I asked myself", booksArr); //Full Phrase case
 
-// Case-Sensitive Unit Tests
-findSearchTermInBooks("the", booksArr);
-findSearchTermInBooks("The", booksArr);
+const output1 = {
+  SearchTerm: "the",
+  Results: [
+    {
+      ISBN: "(ISBN for Book 1)",
+      Page: 1,
+      Line: 1,
+    },
+    {
+      ISBN: "(ISBN for Book 1)",
+      Page: 1,
+      Line: 2,
+    },
+    {
+      ISBN: "(ISBN for Book 2)",
+      Page: 31,
+      Line: 9,
+    },
+  ],
+};
+const output2 = {
+  SearchTerm: "The",
+  Results: [
+    {
+      ISBN: "(ISBN for Book 2)",
+      Page: 31,
+      Line: 8,
+    },
+  ],
+};
+const output3 = {
+  SearchTerm: "myself",
+  Results: [
+    {
+      ISBN: "(ISBN for Book 1)",
+      Page: 1,
+      Line: 2,
+    },
+    {
+      ISBN: "(ISBN for Book 2)",
+      Page: 31,
+      Line: 10,
+    },
+  ],
+};
+const output4 = {
+  SearchTerm: "Zootopia",
+  Results: [],
+};
+const output5 = {
+  SearchTerm: "I asked myself",
+  Results: [
+    {
+      ISBN: "(ISBN for Book 2)",
+      Page: 31,
+      Line: 10,
+    },
+  ],
+};
 
-// Hits/Positive tests:
-findSearchTermInBooks("myself", booksArr);
+if (JSON.stringify(testResult1) === JSON.stringify(output1)) {
+  console.log("PASS: Test 1");
+} else {
+  console.log("FAIL: Test 1");
+  console.log("Expected: ", output1);
+  console.log("Received: ", testResult1);
+}
 
-// Misses/Negative Tests:
-findSearchTermInBooks("Zootopia", booksArr);
-
-// Full Phrase Test:
-findSearchTermInBooks("I asked myself", booksArr);
+if (JSON.stringify(testResult2) === JSON.stringify(output2)) {
+  console.log("PASS: Test 2");
+} else {
+  console.log("FAIL: Test 2");
+  console.log("Expected: ", output2);
+  console.log("Received: ", testResult2);
+}
+if (JSON.stringify(testResult3) === JSON.stringify(output3)) {
+  console.log("PASS: Test 3");
+} else {
+  console.log("FAIL: Test 3");
+  console.log("Expected: ", output3);
+  console.log("Received: ", testResult3);
+}
+if (JSON.stringify(testResult4) === JSON.stringify(output4)) {
+  console.log("PASS: Test 4");
+} else {
+  console.log("FAIL: Test 4");
+  console.log("Expected: ", output4);
+  console.log("Received: ", testResult4);
+}
+if (JSON.stringify(testResult5) === JSON.stringify(output5)) {
+  console.log("PASS: Test 5");
+} else {
+  console.log("FAIL: Test 5");
+  console.log("Expected: ", output5);
+  console.log("Received: ", testResult5);
+}

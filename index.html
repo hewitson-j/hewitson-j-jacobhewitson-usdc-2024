@@ -19,8 +19,9 @@
     </header>
 
     <div class="main">
-      Welcome to our organization's book search! Enter in your search term below
-      to find the ISBN, page number, and line of any matching results.
+      Welcome to our organization's book search! Enter in your search term for a
+      phrase found in your book. If there are any matches, it will display the
+      ISBN, page number, and line of any matching results.
       <div class="searchbar">
         <input type="text" id="search-text" />
         <input type="button" id="search-button" value="Search" />
@@ -28,7 +29,7 @@
     </div>
     <div class="results">
       <h3>Results:</h3>
-      <p class="results-body">None</p>
+      <p id="results-body">None</p>
     </div>
   </body>
   <script src="index.js"></script>
